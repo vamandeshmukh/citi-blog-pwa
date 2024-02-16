@@ -13,7 +13,7 @@ if ("serviceWorker" in navigator) {
 const url = 'https://jsonplaceholder.typicode.com/posts';
 
 const getBlogById = () => {
-  const blogId = document.getElementById('blog-id').value;
+  const blogId = document.getElementById('blogid').value;
   console.log(blogId);
 
   fetch(`${url}/${blogId}`)
@@ -22,10 +22,6 @@ const getBlogById = () => {
       console.log(data);
       document.getElementById('blog-title').innerHTML = data.title;
       document.getElementById('blog-body').innerHTML = data.body;
-      data.forEach(elem => {
-        blogList += `<p>${elem.title}</p>`;
-      });
-      document.getElementById('blog-list').innerHTML = blogList;
     })
     .catch();
 }
@@ -43,10 +39,11 @@ const writeBlog = () => {
 const getBlogList = () => {
   console.log('getBlogList');
 
-  fetch(`${url}/${blogId}`)
+  fetch(url)
     .then(resp => resp.json())
     .then(data => {
       console.log(data);
+      let blogList = `<p>Blog List</p>`;
       data.forEach(elem => {
         blogList += `<p>${elem.title}</p>`;
       });

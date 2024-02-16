@@ -7,17 +7,17 @@
   "theme_color": "#262626",
   "icons": [
     {
-      "src": "images/citi512.png",
+      "src": "/images/citi512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "images/citi192.png",
+      "src": "/images/citi192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "images/citi-logo.png",
+      "src": "/images/citi-logo.png",
       "type": "image/png",
       "sizes": "2000x540"
     }
