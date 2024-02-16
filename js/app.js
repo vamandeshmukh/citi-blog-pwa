@@ -30,6 +30,32 @@ const getBlogById = () => {
     .catch();
 }
 
+const writeBlog = () => {
+
+  fetch()
+    .then()
+    .then()
+    .catch(e => console.log(e));
+
+
+};
+
+const getBlogList = () => {
+  console.log('getBlogList');
+
+  fetch(`${url}/${blogId}`)
+    .then(resp => resp.json())
+    .then(data => {
+      console.log(data);
+      data.forEach(elem => {
+        blogList += `<p>${elem.title}</p>`;
+      });
+      document.getElementById('blog-list').innerHTML = blogList;
+    })
+    .catch(e => console.log(e));
+}
+
+
 // const url = 'https://jsonplaceholder.typicode.com/posts';
 // fetch(url)
 //   .then(resp => resp.json())
