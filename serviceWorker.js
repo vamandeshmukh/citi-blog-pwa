@@ -3,12 +3,12 @@
 const citiCache = "citi-app-v1";
 
 const assets = [
-  "/",
-  "/index.html",
+  // "/",
+  // "/index.html",
   "/page404.html",
-  "/css/style.css",
-  "/js/app.js",
-  "/images/citi-logo.png"
+  // "/css/style.css",
+  // "/js/app.js",
+  // "/images/citi-logo.png"
 ];
 
 async function precache() {
