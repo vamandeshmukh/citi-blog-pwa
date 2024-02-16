@@ -28,10 +28,24 @@ const getBlogById = () => {
 
 const writeBlog = () => {
 
-  fetch()
-    .then()
-    .then()
-    .catch(e => console.log(e));
+  const blogData = {
+    title: document.getElementById('title').value,
+    body: document.getElementById('body').value
+  };
+  console.log(blogData);
+
+  fetch(url, { method: 'POST', body: blogData })
+    .then((res) =>
+      res.json()
+    )
+    .then((data) => {
+      console.log(data);
+      document.getElementById('submit-blog').innerText = `Your blog submitted successfully!`;
+    })
+    .catch((e) => {
+      console.log(e);
+      document.getElementById('submit-blog').innerText = `Your blog could not be submitted!`;
+    });
 
 
 };
